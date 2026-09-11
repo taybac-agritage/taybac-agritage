@@ -5,26 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>taybac-agritage.vn</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-deep:#1B2E20;      /* xanh rừng đậm - nền chính */
-    --bg-panel:#22392A;     /* xanh rừng nhạt hơn cho khối */
-    --cream:#F3EEE1;        /* chữ sáng */
-    --mang:#7FA650;         /* xanh măng */
+    --bg-deep:#20301A;      /* xanh matcha đậm - nền chính */
+    --bg-panel:#2B3F23;     /* xanh matcha nhạt hơn cho khối */
+    --matcha:#3F562C;       /* xanh matcha - màu thương hiệu */
+    --gold:#E8B364;         /* vàng - màu nhấn thương hiệu */
+    --cream:#F5F1E6;        /* chữ sáng */
+    --mang:#8CA66B;         /* xanh măng */
     --mang-dark:#4E6B31;
-    --gung:#D9A404;         /* vàng nghệ - gừng */
-    --gung-dark:#8C6B03;
+    --gung:#E8B364;         /* vàng - gừng */
+    --gung-dark:#A87830;
     --que:#B0632C;          /* nâu quế */
     --que-dark:#6E3D1B;
-    --hairline:rgba(243,238,225,0.14);
+    --hairline:rgba(245,241,230,0.14);
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
     background:var(--bg-deep);
     color:var(--cream);
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Montserrat', sans-serif;
     min-height:100vh;
     -webkit-font-smoothing:antialiased;
   }
@@ -60,11 +62,21 @@
   }
   .sub{
     font-size:16px;
-    color:rgba(243,238,225,0.72);
-    max-width:520px;
+    color:rgba(245,241,230,0.72);
+    max-width:560px;
     margin:0 auto;
     line-height:1.55;
     outline:none;
+  }
+  .open-sentence{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(17px,2.2vw,20px);
+    color:var(--gold);
+    max-width:640px;
+    margin:24px auto 0;
+    line-height:1.5;
   }
   .cards{
     display:grid;
@@ -115,7 +127,7 @@
   }
   .card-desc{
     font-size:14px;
-    color:rgba(243,238,225,0.65);
+    color:rgba(245,241,230,0.65);
     line-height:1.5;
     min-height:20px;
     outline:none;
@@ -157,6 +169,24 @@
     font-family:'Fraunces', serif;
     font-weight:600;
     font-size:clamp(24px,3.6vw,32px);
+    margin:0;
+  }
+  .material-intro{
+    text-align:center;
+    max-width:680px;
+    margin:0 auto 36px;
+  }
+  .material-intro .eyebrow{margin-bottom:10px;}
+  .material-intro h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(24px,3.6vw,32px);
+    margin:0 0 14px;
+  }
+  .material-intro p{
+    font-size:14px;
+    color:rgba(245,241,230,0.68);
+    line-height:1.6;
     margin:0;
   }
   .video-wrap{
@@ -222,14 +252,14 @@
   .guide-step:nth-child(3n+2) .step-num{background:var(--gung);}
   .guide-step:nth-child(3n+3) .step-num{background:var(--que);}
   .step-body h3{
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Montserrat', sans-serif;
     font-weight:600;
     font-size:16px;
     margin:2px 0 6px;
   }
   .step-body p{
     font-size:14px;
-    color:rgba(243,238,225,0.68);
+    color:rgba(245,241,230,0.68);
     line-height:1.6;
     margin:0;
   }
@@ -272,7 +302,7 @@
     font-size:28px;
     color:var(--cream);
     line-height:1;
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:'Montserrat', sans-serif;
   }
 
   footer{
@@ -280,12 +310,38 @@
     padding-top:32px;
     border-top:1px solid var(--hairline);
     font-size:12px;
-    color:rgba(243,238,225,0.4);
+    color:rgba(245,241,230,0.4);
+  }
+  .footer-org{
+    display:flex;
+    justify-content:center;
+    gap:56px;
+    flex-wrap:wrap;
+    margin-bottom:24px;
+  }
+  .footer-col{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .footer-label{
+    font-size:10px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+  }
+  .footer-col span:last-child{
+    font-size:13px;
+    color:rgba(245,241,230,0.75);
+  }
+  .footer-base{
+    line-height:1.6;
   }
   .edit-hint{
     text-align:center;
     font-size:12px;
-    color:rgba(243,238,225,0.4);
+    color:rgba(245,241,230,0.4);
     margin-bottom:36px;
   }
 </style>
@@ -294,23 +350,30 @@
   <div class="wrap">
     <header>
       <div class="eyebrow">Công ty TNHH Đầu tư và Phát triển Tây Bắc — Agritage Việt Nam</div>
-      <h1>Ba vùng nguyên liệu,<br><em>một mối liên kết</em></h1>
-      <p class="sub">Chọn hợp tác xã bên dưới để xem hồ sơ kinh doanh và bản đồ vùng trồng chi tiết.</p>
+      <h1>Cùng người Tày<br><em>trân trọng sản vật dưới tán rừng</em></h1>
+      <p class="sub">Đằng sau vẻ trù phú của thiên nhiên là những sinh kế đa dạng dưới tán rừng, được quản lý và truy xuất nguồn gốc minh bạch, rõ ràng; cùng con người hồn hậu, văn hoá đặc sắc.</p>
+      <p class="open-sentence">Bên cạnh những viên đá quý ẩn sâu trong lòng núi, Lâm Thượng, vùng đất Lục Yên xưa, nay thuộc tỉnh Lào Cai còn có một báu vật khác: những cánh rừng nuôi dưỡng măng Mai và nhiều sản vật bản địa.</p>
     </header>
+
+    <section class="material-intro">
+      <div class="eyebrow">Truy xuất vùng nguyên liệu</div>
+      <h2>Vùng nguyên liệu dưới tán rừng</h2>
+      <p>Những nguyên liệu gắn liền với sinh kế dưới tán rừng như măng mai, gừng, quế được bà con trồng phân tán trên những cánh rừng, sườn đồi và mảnh vườn quanh bản, theo nếp canh tác đã có từ bao đời của người Tày, đã được số hoá theo từng loại cây trồng, nơi mỗi vùng đất đều có vị trí, diện tích và câu chuyện riêng của mình.</p>
+    </section>
 
     <div class="cards">
       <!-- HTX MĂNG -->
       <div class="card mang">
         <div class="icon">
           <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 6C22 6 15 14 15 24C15 32 18 38 22 38C26 38 29 32 29 24C29 14 22 6 22 6Z" stroke="#7FA650" stroke-width="2"/>
-            <path d="M17 16L27 20M16 22L28 26M17 30L27 32" stroke="#7FA650" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M22 6C22 6 15 14 15 24C15 32 18 38 22 38C26 38 29 32 29 24C29 14 22 6 22 6Z" stroke="#8CA66B" stroke-width="2"/>
+            <path d="M17 16L27 20M16 22L28 26M17 30L27 32" stroke="#8CA66B" stroke-width="1.4" stroke-linecap="round"/>
           </svg>
         </div>
-        <div class="card-name">HTX Măng</div>
-        <div class="card-desc">Hồ sơ kinh doanh, sản lượng và bản đồ vùng trồng măng.</div>
+        <div class="card-name">Măng mai</div>
+        <div class="card-desc">Sinh trưởng tự nhiên trên các sườn đồi, măng mai là cây trồng chủ lực của Lâm Thượng. Sau thu hoạch, măng được sơ chế thành măng tươi và măng khô thái sợi.</div>
         <a class="btn" href="https://www.google.com/maps/d/edit?mid=19PyvPATXo3lJ3RsmCFZ056pbx2mgusc&usp=sharing" target="_blank" rel="noopener">
-          Mở dữ liệu
+          Mở cơ sở dữ liệu
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
         </a>
       </div>
@@ -319,13 +382,13 @@
       <div class="card gung">
         <div class="icon">
           <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 28C10 26 9 20 13 17C13 13 18 11 21 14C25 12 30 15 29 20C33 21 33 27 29 29C29 33 23 35 20 32C16 34 12 31 14 28Z" stroke="#D9A404" stroke-width="2"/>
+            <path d="M14 28C10 26 9 20 13 17C13 13 18 11 21 14C25 12 30 15 29 20C33 21 33 27 29 29C29 33 23 35 20 32C16 34 12 31 14 28Z" stroke="#E8B364" stroke-width="2"/>
           </svg>
         </div>
-        <div class="card-name">HTX Gừng</div>
-        <div class="card-desc">Hồ sơ kinh doanh, sản lượng và bản đồ vùng trồng gừng.</div>
+        <div class="card-name">Gừng</div>
+        <div class="card-desc">Trồng xen dưới tán rừng theo mô hình nông lâm kết hợp, gừng là nguồn thu nhập bổ sung cho các hộ dân. Sản phẩm chính gồm: gừng thái lát khô, bột gừng nguyên chất, trà gừng.</div>
         <a class="btn" href="https://www.google.com/maps/d/u/0/edit?mid=1X8sxjFa9J2gLWLDCgszoIs7wEGh_qYA&ll=22.214123278957707%2C104.65531310961819&z=14" target="_blank" rel="noopener">
-          Mở dữ liệu
+          Mở cơ sở dữ liệu
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
         </a>
       </div>
@@ -338,10 +401,10 @@
             <path d="M12 14V30" stroke="#B0632C" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
-        <div class="card-name">HTX Quế</div>
-        <div class="card-desc">Hồ sơ kinh doanh, sản lượng và bản đồ vùng trồng quế.</div>
+        <div class="card-name">Quế</div>
+        <div class="card-desc">Trồng xen cùng gừng và dược liệu dưới tán rừng, quế cho thu hoạch sau nhiều năm. Vỏ quế phơi khô là sản phẩm chính, dùng làm gia vị và nguyên liệu chiết xuất tinh dầu.</div>
         <a class="btn" href="https://www.google.com/maps/d/edit?mid=1NdXsGKHJ9qeYrKXXJ0YNNIH0JTDGpXY&usp=sharing" target="_blank" rel="noopener">
-          Mở dữ liệu
+          Mở cơ sở dữ liệu
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
         </a>
       </div>
@@ -350,7 +413,7 @@
     <section class="guide">
       <div class="guide-head">
         <div class="eyebrow">Hướng dẫn</div>
-        <h2>Cách sử dụng website bản đồ vùng nguyên liệu</h2>
+        <h2>Video hướng dẫn xem cơ sở dữ liệu</h2>
       </div>
 
       <div class="video-wrap">
@@ -461,8 +524,20 @@
     </section>
 
     <footer>
-      Công ty TNHH Đầu tư và Phát triển Tây Bắc — Agritage Việt Nam<br>
-      Cập nhật lần cuối: tháng 8/2026 · Trang liên kết dữ liệu 3 HTX
+      <div class="footer-org">
+        <div class="footer-col">
+          <span class="footer-label">Đơn vị thực hiện</span>
+          <span>CDSH — Trung tâm Hợp tác phát triển Tây Bắc</span>
+        </div>
+        <div class="footer-col">
+          <span class="footer-label">Đơn vị tài trợ</span>
+          <span>Liên minh châu Âu</span>
+        </div>
+      </div>
+      <div class="footer-base">
+        Công ty TNHH Đầu tư và Phát triển Tây Bắc — Agritage Việt Nam<br>
+        Cập nhật lần cuối: tháng 9/2026 · Trang liên kết dữ liệu vùng nguyên liệu
+      </div>
     </footer>
   </div>  <div id="lightbox" onclick="closeLightbox()">
     <span class="lb-close">&times;</span>
