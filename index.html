@@ -123,14 +123,17 @@
     width:100%;
     height:100%;
     z-index:0;
+    background-size:cover;
+    background-position:center 40%;
+    background-repeat:no-repeat;
   }
   .hero-scrim{
     position:absolute;
     inset:0;
     z-index:1;
     background:
-      linear-gradient(180deg, rgba(20,32,16,0.35) 0%, rgba(20,32,16,0.15) 30%, rgba(20,32,16,0.55) 100%),
-      radial-gradient(ellipse 60% 55% at 50% 52%, rgba(15,25,12,0.6) 0%, rgba(15,25,12,0) 72%);
+      linear-gradient(180deg, rgba(15,22,12,0.5) 0%, rgba(15,22,12,0.25) 32%, rgba(15,22,12,0.65) 100%),
+      radial-gradient(ellipse 62% 58% at 50% 50%, rgba(10,17,8,0.68) 0%, rgba(10,17,8,0) 72%);
   }
   .hero-inner{
     position:relative;
@@ -157,6 +160,14 @@
     margin:0 auto;
     line-height:1.6;
     text-shadow:0 1px 12px rgba(0,0,0,0.4);
+  }
+  .hero-credit{
+    position:absolute;
+    right:16px;
+    bottom:10px;
+    z-index:2;
+    font-size:10px;
+    color:rgba(251,248,239,0.55);
   }
   .open-sentence{
     text-align:left;
@@ -385,55 +396,7 @@
   <div class="wrap">
     <div id="home" class="page active-page">
       <section class="hero">
-        <svg class="hero-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EFE0AE"/>
-      <stop offset="42%" stop-color="#CFDD8E"/>
-      <stop offset="100%" stop-color="#8FBE5A"/>
-    </linearGradient>
-    <radialGradient id="sunGlow" cx="76%" cy="12%" r="40%">
-      <stop offset="0%" stop-color="#FCE7A6" stop-opacity="0.9"/>
-      <stop offset="55%" stop-color="#F6D27A" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#F6D27A" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="mist1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="mist2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1F3B1B" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#1F3B1B" stop-opacity="0.5"/>
-    </linearGradient>
-  </defs>
-  <rect width="1600" height="900" fill="url(#skyGrad)"/>
-  <rect width="1600" height="900" fill="url(#sunGlow)"/>
-  <circle cx="1230" cy="130" r="58" fill="#FCEFC0" opacity="0.95"/>
-  <path d="M0,452.1 L123.1,484.8 L246.2,493.4 L369.2,445.4 L492.3,408.6 L615.4,397.0 L738.5,404.5 L861.5,454.7 L984.6,487.3 L1107.7,488.7 L1230.8,432.7 L1353.8,401.5 L1476.9,381.1 L1600.0,425.3 L1600,900 L0,900 Z" fill="#9FCB6E" opacity="0.9"/>
-  <rect x="0" y="400" width="1600" height="100" fill="url(#mist1)"/>
-  <path d="M0,592.1 L123.1,536.0 L246.2,524.1 L369.2,493.5 L492.3,492.8 L615.4,535.5 L738.5,561.0 L861.5,565.3 L984.6,554.2 L1107.7,487.1 L1230.8,462.9 L1353.8,477.2 L1476.9,513.5 L1600.0,573.6 L1600,900 L0,900 Z" fill="#7FB755" opacity="0.92"/>
-  <rect x="0" y="500" width="1600" height="110" fill="url(#mist2)"/>
-  <path d="M0,630.0 L123.1,597.9 L246.2,569.9 L369.2,607.3 L492.3,655.1 L615.4,697.1 L738.5,677.7 L861.5,621.9 L984.6,604.0 L1107.7,590.8 L1230.8,616.9 L1353.8,665.1 L1476.9,682.2 L1600.0,667.1 L1600,900 L0,900 Z" fill="#5FA23F"/>
-  <path d="M0,653.8 L123.1,661.6 L246.2,737.6 L369.2,765.3 L492.3,788.6 L615.4,733.9 L738.5,707.0 L861.5,676.4 L984.6,659.5 L1107.7,715.9 L1230.8,786.5 L1353.8,773.0 L1476.9,757.1 L1600.0,683.5 L1600,900 L0,900 Z" fill="#3E7A34"/>
-  <g opacity="0.95" fill="#2C5228">
-    <rect x="60" y="640" width="12" height="320" rx="6"/>
-    <rect x="100" y="600" width="14" height="360" rx="7"/>
-    <rect x="140" y="660" width="11" height="300" rx="5.5"/>
-    <rect x="175" y="620" width="13" height="340" rx="6.5"/>
-    <rect x="1420" y="630" width="12" height="330" rx="6"/>
-    <rect x="1460" y="590" width="15" height="370" rx="7.5"/>
-    <rect x="1505" y="650" width="11" height="310" rx="5.5"/>
-    <rect x="1540" y="610" width="13" height="350" rx="6.5"/>
-    <rect x="1575" y="670" width="9" height="290" rx="4.5"/>
-  </g>
-  <rect x="0" y="620" width="1600" height="280" fill="url(#scrim)"/>
-</svg>
+        <div class="hero-bg" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Vuon_QG_Hoang_Lien.JPG');"></div>
         <div class="hero-scrim"></div>
         <div class="hero-inner">
           <h1>Cùng người Tày trân trọng<br>sản vật dưới tán rừng</h1>
