@@ -1119,10 +1119,16 @@
         <h1><span class="i18n" data-en='Local products'>Sản phẩm bản địa</span></h1>
         <p><span class="i18n" data-en='Some livelihoods begin as a small sprout, growing beneath the forest canopy and nurtured by local hands season after season. Today, products from Lâm Thượng are shaped by the land, the forest, and countless days of care, carrying the dedication of the people who live and work alongside the forest.'>Có những sinh kế bắt đầu từ một mầm cây nhỏ, lớn lên dưới tán rừng và được vun bồi bằng đôi bàn tay người dân qua từng mùa. Những sản vật Lâm Thượng hôm nay là kết tinh của đất, của rừng và của biết bao ngày tháng cần mẫn, mang theo cả tâm huyết của những người đang sống và làm việc cùng rừng.</span></p>
       </div>
+      <div class="coop-filter">
+        <button class="active" onclick="filterGroup('all', this)"><span class="i18n" data-en='All'>Tất cả</span></button>
+        <button onclick="filterGroup('mang', this)"><span class="i18n" data-en='Bamboo'>Măng</span></button>
+        <button onclick="filterGroup('gung', this)"><span class="i18n" data-en='Ginger'>Gừng</span></button>
+        <button onclick="filterGroup('que', this)"><span class="i18n" data-en='Cinnamon'>Quế</span></button>
+      </div>
 
-      <div style="margin-bottom:48px;">
+      <div class="product-group" data-group="mang">
         <h2 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:clamp(20px,2.6vw,26px); margin:0 0 10px; letter-spacing:-0.01em;"><span class="i18n" data-en='Bamboo shoot products'>Sản phẩm về măng</span></h2>
-        <p style="font-size:14px; line-height:1.7; color:var(--cream-dim); max-width:640px; margin:0 0 24px;"><span class="i18n" data-en='Each bamboo season brings new life beneath the forest canopy of Lâm Thượng. From shoots tended, harvested and processed by local hands, these products come to life.'>Mỗi mùa măng về lại mang theo một nhịp sống mới dưới tán rừng Lâm Thượng. Từ những búp măng mai được bà con chăm sóc, thu hái và chế biến, những sản vật địa phương ra đời.</span></p>
+        <p style="font-size:14px; line-height:1.7; color:var(--cream-dim); max-width:640px; margin:0 0 24px;"><span class="i18n" data-en='Each bamboo season brings new life beneath the forest canopy of Lâm Thượng. From shoots tended, harvested and processed by local hands, these products create more work and livelihood for those connected to the forest.'>Mỗi mùa măng về lại mang theo một nhịp sống mới dưới tán rừng Lâm Thượng. Từ những búp măng mai được bà con chăm sóc, thu hái và chế biến, những sản vật địa phương ra đời, góp phần tạo thêm công việc và sinh kế cho những người gắn bó với rừng.</span></p>
         <div class="product-grid">
           <div class="product-card">
             <div class="product-photo" style="background:linear-gradient(135deg, #5FA23F22, #5FA23F05);"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
@@ -1138,9 +1144,9 @@
           </div>
         </div>
       </div>
-      <div style="margin-bottom:48px;">
+      <div class="product-group" data-group="gung">
         <h2 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:clamp(20px,2.6vw,26px); margin:0 0 10px; letter-spacing:-0.01em;"><span class="i18n" data-en='Ginger products'>Sản phẩm về gừng</span></h2>
-        <p style="font-size:14px; line-height:1.7; color:var(--cream-dim); max-width:640px; margin:0 0 24px;"><span class="i18n" data-en='Intercropped beneath the forest under an agroforestry model, ginger is tended and harvested seasonally by Lâm Thượng households, then processed into products with distinct local flavour.'>Trồng xen dưới tán rừng theo mô hình nông lâm kết hợp, gừng được bà con Lâm Thượng chăm sóc và thu hái theo mùa, sau đó sơ chế thành những sản vật mang đậm hương vị bản địa.</span></p>
+        <p style="font-size:14px; line-height:1.7; color:var(--cream-dim); max-width:640px; margin:0 0 24px;"><span class="i18n" data-en='Fresh ginger is one of the raw materials closely tied to the life and livelihood of Lâm Thượng households. Grown on land around the village and beneath the forest canopy, ginger is tended and harvested seasonally, creating extra work and income from local resources.'>Gừng tươi là một trong những nguồn nguyên liệu gắn với đời sống và sinh kế của bà con Lâm Thượng. Từ những vùng đất quanh bản và dưới tán rừng, cây gừng được bà con chăm sóc, thu hái theo mùa, góp phần tạo thêm việc làm và thu nhập từ những nguồn lực sẵn có của địa phương.</span></p>
         <div class="product-grid">
           <div class="product-card">
             <div class="product-photo" style="background:linear-gradient(135deg, #E8A93B22, #E8A93B05);"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
@@ -1160,7 +1166,7 @@
           </div>
         </div>
       </div>
-      <div style="margin-bottom:48px;">
+      <div class="product-group" data-group="que">
         <h2 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:clamp(20px,2.6vw,26px); margin:0 0 10px; letter-spacing:-0.01em;"><span class="i18n" data-en='Cinnamon products'>Sản phẩm về quế</span></h2>
         <p style="font-size:14px; line-height:1.7; color:var(--cream-dim); max-width:640px; margin:0 0 24px;"><span class="i18n" data-en='Cinnamon is intercropped with ginger and medicinal herbs beneath the forest, harvested after years of steady care. Once dried, the bark becomes a valuable ingredient for both spice and essential oil extraction.'>Quế được trồng xen cùng gừng và dược liệu dưới tán rừng, cho thu hoạch sau nhiều năm chăm sóc bền bỉ. Vỏ quế sau khi phơi khô trở thành nguyên liệu quý cho cả gia vị lẫn chiết xuất tinh dầu.</span></p>
         <div class="product-grid">
@@ -1280,10 +1286,17 @@
     }
 
     function filterCoop(key, btn){
-      document.querySelectorAll('.coop-filter button').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('#vung-nguyen-lieu .coop-filter button').forEach(function(b){ b.classList.remove('active'); });
       btn.classList.add('active');
       document.querySelectorAll('.coop-card').forEach(function(card){
         card.style.display = (key === 'all' || card.dataset.coop === key) ? 'grid' : 'none';
+      });
+    }
+    function filterGroup(key, btn){
+      document.querySelectorAll('#san-pham .coop-filter button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.product-group').forEach(function(g){
+        g.style.display = (key === 'all' || g.dataset.group === key) ? 'block' : 'none';
       });
     }
   </script>
