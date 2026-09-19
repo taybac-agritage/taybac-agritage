@@ -466,6 +466,221 @@
   }
   .m-back a:hover{color:var(--gold);}
 
+  /* ===================== STATS ===================== */
+  .stats-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-bottom:56px;
+  }
+  @media(max-width:760px){.stats-row{grid-template-columns:repeat(2,1fr);}}
+  .stat-card{
+    text-align:center;
+    padding:26px 16px;
+    background:var(--bg-panel);
+    border:1px solid var(--hairline);
+    border-radius:10px;
+  }
+  .stat-num{
+    font-family:'Montserrat', sans-serif;
+    font-weight:800;
+    font-size:clamp(22px,3vw,30px);
+    color:var(--matcha);
+    margin-bottom:6px;
+  }
+  .stat-label{
+    font-size:12px;
+    color:var(--cream-dim);
+    line-height:1.4;
+  }
+
+  /* ===================== PAGE HEADER ===================== */
+  .page-head{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 48px;
+    padding-top:8px;
+  }
+  .page-head h1{
+    font-family:'Montserrat', sans-serif;
+    font-weight:800;
+    font-size:clamp(28px,4.4vw,40px);
+    margin:0 0 14px;
+    letter-spacing:-0.01em;
+  }
+  .page-head p{
+    font-size:14px;
+    color:var(--cream-dim);
+    line-height:1.7;
+    max-width:640px;
+    margin:0 auto;
+  }
+
+  /* ===================== AUDIENCE CARDS ===================== */
+  .audience-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:56px;
+  }
+  @media(max-width:820px){.audience-grid{grid-template-columns:1fr;}}
+  .audience-card{
+    padding:28px 24px;
+    background:var(--bg-panel);
+    border:1px solid var(--hairline);
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+  }
+  .audience-card h3{
+    font-family:'Montserrat', sans-serif;
+    font-weight:700;
+    font-size:16px;
+    margin:0 0 12px;
+  }
+  .audience-card p{
+    font-size:13.5px;
+    line-height:1.65;
+    color:var(--cream-dim);
+    margin:0 0 18px;
+    flex:1;
+  }
+  .audience-card .a-links{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .audience-card a{
+    font-size:13px;
+    font-weight:600;
+    color:var(--matcha);
+    text-decoration:none;
+  }
+  .audience-card a:hover{color:var(--gold);}
+
+  /* ===================== COOP TABS / CARDS ===================== */
+  .coop-filter{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:36px;
+  }
+  .coop-filter button{
+    padding:9px 18px;
+    border-radius:999px;
+    border:1px solid var(--hairline);
+    background:var(--bg-panel);
+    color:var(--cream-dim);
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .coop-filter button:hover{border-color:var(--gold);}
+  .coop-filter button.active{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:#182611;
+  }
+  .coop-card{
+    display:grid;
+    grid-template-columns:1fr 0.85fr;
+    gap:44px;
+    align-items:start;
+    padding:36px 0 44px;
+    border-bottom:1px solid var(--hairline);
+  }
+  .coop-card:last-child{border-bottom:none;}
+  @media(max-width:820px){
+    .coop-card{grid-template-columns:1fr; gap:24px;}
+  }
+  .coop-card .kicker{font-size:13px; font-weight:600; color:var(--m-accent, var(--gold)); margin-bottom:10px;}
+  .coop-card h2{
+    font-family:'Montserrat', sans-serif;
+    font-weight:800;
+    font-size:clamp(24px,3.4vw,32px);
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .coop-org{
+    font-size:14px;
+    font-weight:600;
+    color:var(--cream-dim);
+    margin-bottom:18px;
+  }
+  .coop-meta{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin-bottom:18px;
+    font-size:13px;
+  }
+  .coop-meta div{color:var(--cream-dim);}
+  .coop-meta b{color:var(--text-dark); font-weight:600; margin-right:4px;}
+  .coop-card p.desc{
+    font-size:14.5px;
+    line-height:1.7;
+    color:var(--cream-dim);
+    margin:0 0 22px;
+    max-width:56ch;
+  }
+  .coop-right{
+    background:var(--bg-panel);
+    border:1px solid var(--hairline);
+    border-radius:14px;
+    padding:24px;
+  }
+  .coop-right .material-art{max-width:220px; margin:0 auto 20px; display:block;}
+  .coop-products{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .coop-products span{
+    font-size:12px;
+    font-weight:600;
+    padding:5px 11px;
+    border-radius:999px;
+    background:var(--gold-soft);
+    color:var(--text-dark);
+  }
+
+  /* ===================== CONTACT ===================== */
+  .contact-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    padding-bottom:56px;
+  }
+  @media(max-width:760px){.contact-wrap{grid-template-columns:1fr;}}
+  .contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .contact-item{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+  .contact-item svg{width:20px;height:20px;flex:none;color:var(--gold); margin-top:2px;}
+  .contact-item b{display:block; font-size:13px; margin-bottom:3px;}
+  .contact-item span{font-size:13.5px; color:var(--cream-dim); line-height:1.5;}
+  .contact-map-note{
+    background:var(--bg-panel);
+    border:1px solid var(--hairline);
+    border-radius:14px;
+    padding:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:13px;
+    color:var(--cream-faint);
+    min-height:220px;
+  }
+
   /* ===================== LANG SWITCH ===================== */
   .lang-switch{
     display:flex;
@@ -565,9 +780,9 @@
     </a>
     <nav class="topnav">
       <a href="#home" data-page="home"><span class="i18n" data-en='Home'>Trang chủ</span></a>
-      <a href="#mang" data-page="mang"><span class="i18n" data-en='Bamboo'>HTX Măng</span></a>
-      <a href="#gung" data-page="gung"><span class="i18n" data-en='Ginger'>HTX Gừng</span></a>
-      <a href="#que" data-page="que"><span class="i18n" data-en='Cinnamon'>HTX Quế</span></a>
+      <a href="#gioi-thieu" data-page="gioi-thieu"><span class="i18n" data-en='About'>Giới thiệu</span></a>
+      <a href="#vung-nguyen-lieu" data-page="vung-nguyen-lieu"><span class="i18n" data-en='Growing Regions'>Vùng nguyên liệu</span></a>
+      <a href="#lien-he" data-page="lien-he"><span class="i18n" data-en='Contact'>Liên hệ</span></a>
     </nav>
     <div class="lang-switch">
       <button class="lang-btn" data-lang="vi" onclick="applyLang('vi')">
@@ -593,8 +808,8 @@
         <div class="hero-caption">
           <h1>Lâm Thượng</h1>
           <p class="tagline"><span class="i18n" data-en='A green land, connecting every journey'>Miền đất xanh, gắn kết bao hành trình</span></p>
-          <p class="sub"><span class="i18n" data-en='Behind this thriving landscape lie diverse livelihoods beneath the forest canopy, managed and traced with full transparency, alongside warm-hearted people and a rich culture.'>Đằng sau vẻ trù phú của thiên nhiên là những sinh kế đa dạng dưới tán rừng, được quản lý và truy xuất nguồn gốc minh bạch, rõ ràng; cùng con người hồn hậu, văn hoá đặc sắc.</span></p>
-          <a class="hero-cta" href="#home" onclick="setTimeout(function(){document.getElementById('huong-dan-su-dung').scrollIntoView({behavior:'smooth'})},60)"><span class="i18n" data-en='View the user guide'>Xem hướng dẫn sử dụng</span></a>
+          <p class="sub"><span class="i18n" data-en='The Lâm Thượng Agroforestry & Herbal Cooperative Network connects cooperatives across Lâm Thượng, Tân Lĩnh, Khánh Hoà, Phúc Lợi and Mường Lai, where natural and planted forests sustain resilient livelihoods beneath the canopy.'>Mạng lưới Hợp tác xã Nông Lâm nghiệp & Dược liệu Lâm Thượng kết nối các hợp tác xã tại Lâm Thượng, Tân Lĩnh, Khánh Hoà, Phúc Lợi và Mường Lai, nơi rừng tự nhiên và rừng trồng nuôi dưỡng những sinh kế bền vững dưới tán rừng.</span></p>
+          <a class="hero-cta" href="#gioi-thieu"><span class="i18n" data-en='Learn more'>Xem thêm</span></a>
         </div>
       </section>
 
@@ -602,20 +817,63 @@
         <p><span class="i18n" data-en='Beyond the gemstones hidden deep within its mountains, Lâm Thượng — once part of old Lục Yên, now in Lào Cai province — holds another treasure: forests that nurture countless native products, shaped by the land, the woods, and generations of diligent hands.'>Bên cạnh những viên đá quý ẩn sâu trong lòng núi, Lâm Thượng, vùng đất Lục Yên xưa, nay thuộc tỉnh Lào Cai còn có một báu vật khác: những cánh rừng nuôi dưỡng bao sản vật bản địa, kết tinh từ đất, từ rừng và từ đôi bàn tay cần mẫn của bà con qua bao thế hệ.</span></p>
       </section>
 
-      <section class="split-block">
+      <div class="stats-row">
+        <div class="stat-card"><div class="stat-num">03</div><div class="stat-label"><span class="i18n" data-en='Cooperatives pioneering digital traceability'>Hợp tác xã tiên phong số hoá vùng nguyên liệu</span></div></div>
+        <div class="stat-card"><div class="stat-num">~30 ha</div><div class="stat-label"><span class="i18n" data-en='Growing area mapped with GPS/GIS data'>Vùng nguyên liệu có dữ liệu GPS/GIS</span></div></div>
+        <div class="stat-card"><div class="stat-num">50–70</div><div class="stat-label"><span class="i18n" data-en='Linked households recorded in the system'>Hộ sản xuất liên kết được cập nhật vào hệ thống</span></div></div>
+        <div class="stat-card"><div class="stat-num">60%</div><div class="stat-label"><span class="i18n" data-en='Members are women or from ethnic minority groups'>Thành viên tham gia là phụ nữ & người dân tộc thiểu số</span></div></div>
+      </div>
+    </div>
+
+    <div id="gioi-thieu" class="page">
+      <div class="page-head">
+        <h1><span class="i18n" data-en='About the network'>Giới thiệu mạng lưới</span></h1>
+        <p><span class="i18n" data-en='Lâm Thượng Agroforestry & Herbal Cooperative Network'>Mạng lưới HTX Nông Lâm nghiệp & Dược liệu Lâm Thượng</span></p>
+      </div>
+
+      <section class="split-block" style="margin-bottom:56px;">
         <div class="split-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Vuon%20QG%20Hoang%20Lien%202.jpg');"></div>
         <div class="split-text">
-          <h2><span class="i18n" data-en='Why transparency matters now'>Vì sao minh bạch dữ liệu ngay từ bây giờ?</span></h2>
-          <p><span class="i18n" data-en='Every plot of land, every household beneath the forest canopy carries its own story. Digitising the growing regions makes farming, harvesting and trading clear and verifiable at every step.'>Mỗi thửa đất, mỗi hộ dân dưới tán rừng đều mang một câu chuyện riêng. Số hoá vùng nguyên liệu giúp việc canh tác, thu hoạch và giao thương trở nên rõ ràng, có thể kiểm chứng ở từng công đoạn.</span></p>
-          <p><span class="i18n" data-en='But data is only valuable when it is kept accurate and people know how to use it, which is why a detailed video guide follows below.'>Tuy nhiên, dữ liệu chỉ có giá trị khi được cập nhật đúng và người dùng biết cách khai thác. Đó là lý do trang này có video hướng dẫn chi tiết ngay bên dưới.</span></p>
+          <h2><span class="i18n" data-en='Why the network exists'>Vì sao mạng lưới ra đời?</span></h2>
+          <p><span class="i18n" data-en='The communes in the project area hold large areas of natural and planted forest, sustaining many forest-linked livelihoods: herbs beneath the canopy, cinnamon, ginger intercropped with cinnamon, wild bamboo, native tea and fruit trees. Many cooperatives led by women and ethnic minority groups have gradually built value chains, developed OCOP products and expanded their markets.'>Các xã trong vùng dự án có diện tích rừng tự nhiên và rừng trồng lớn, nuôi dưỡng nhiều mô hình sinh kế gắn với rừng: dược liệu dưới tán rừng, quế, gừng xen quế, măng rừng, chè bản địa và cây ăn quả. Nhiều hợp tác xã do phụ nữ và người dân tộc thiểu số quản lý đã từng bước hình thành chuỗi giá trị, phát triển sản phẩm OCOP và mở rộng thị trường.</span></p>
+          <p><span class="i18n" data-en='Yet most cooperatives still lack the data systems or spatial records to prove their origin, while markets increasingly demand clear traceability and compliance with standards such as EUDR. The network exists to help cooperatives standardise their growing-region data, build traceability systems, and understand where they stand against market requirements.'>Nhưng phần lớn HTX vẫn chưa có hệ thống dữ liệu hay dữ liệu không gian để chứng minh nguồn gốc, trong khi thị trường ngày càng đòi hỏi rõ ràng hơn về xuất xứ và mức độ tuân thủ các tiêu chuẩn như EUDR. Mạng lưới ra đời để giúp các HTX chuẩn hoá dữ liệu vùng nguyên liệu, xây hệ thống truy xuất nguồn gốc và hiểu rõ mình đang ở đâu so với yêu cầu của thị trường.</span></p>
         </div>
       </section>
+
+      <div class="page-head" style="margin-bottom:32px;">
+        <h1 style="font-size:clamp(22px,3.2vw,28px);"><span class="i18n" data-en='Who is the network for?'>Mạng lưới dành cho ai?</span></h1>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3><span class="i18n" data-en='Consumers'>Người tiêu dùng</span></h3>
+          <p><span class="i18n" data-en='Explore the growing regions, the cooperatives behind them, and the stories tied to each local product. Buying here means helping protect the forest and support the livelihoods of the people who made it.'>Khám phá vùng nguyên liệu, hợp tác xã sản xuất và câu chuyện gắn với sản phẩm địa phương. Mua sản phẩm ở đây cũng đồng nghĩa với việc bạn đang góp phần giữ rừng và ủng hộ sinh kế của chính những người đã tạo ra nó.</span></p>
+          <div class="a-links">
+            <a href="#vung-nguyen-lieu"><span class="i18n" data-en='View products →'>Xem sản phẩm →</span></a>
+            <a href="#vung-nguyen-lieu"><span class="i18n" data-en='Explore the growing regions →'>Tìm hiểu vùng nguyên liệu →</span></a>
+          </div>
+        </div>
+        <div class="audience-card">
+          <h3><span class="i18n" data-en='Businesses & trade partners'>Doanh nghiệp & đối tác kinh doanh</span></h3>
+          <p><span class="i18n" data-en='Look up growing regions and each cooperative transparent profile directly before deciding. For compliance needs like EUDR or pre-investment due diligence, this is verifiable data that shortens your verification time.'>Tra cứu trực tiếp vùng nguyên liệu và hồ sơ minh bạch của từng hợp tác xã trước khi quyết định. Với các yêu cầu tuân thủ như EUDR hoặc nhu cầu thẩm định trước đầu tư, đây là nguồn dữ liệu có căn cứ để rút ngắn thời gian xác minh.</span></p>
+          <div class="a-links">
+            <a href="#vung-nguyen-lieu"><span class="i18n" data-en='View each cooperative profile →'>Xem hồ sơ năng lực từng hợp tác xã →</span></a>
+          </div>
+        </div>
+        <div class="audience-card">
+          <h3><span class="i18n" data-en='Cooperatives wanting to join'>Hợp tác xã muốn tham gia</span></h3>
+          <p><span class="i18n" data-en='Joining the network means your growing-region profile is digitised, made public to consumers and partners, and supported with a market-readiness assessment. The more cooperatives join, the stronger each one's negotiating position becomes.'>Tham gia mạng lưới nghĩa là hồ sơ vùng nguyên liệu của bạn được số hoá, hiển thị công khai với người tiêu dùng và đối tác, và được hỗ trợ đánh giá mức độ sẵn sàng đáp ứng tiêu chuẩn thị trường. Mạng lưới càng nhiều HTX, vị thế đàm phán của từng đơn vị càng lớn.</span></p>
+          <div class="a-links">
+            <a href="#lien-he"><span class="i18n" data-en='Find out how to join →'>Tìm hiểu cách tham gia →</span></a>
+          </div>
+        </div>
+      </div>
 
       <section class="guide" id="huong-dan-su-dung">
         <div class="guide-kicker"><span class="i18n" data-en='User Guide'>Hướng dẫn sử dụng</span></div>
         <div class="guide-head">
-          <h2><span class="i18n" data-en='Video guide: how to view the database'>Video hướng dẫn xem cơ sở dữ liệu</span></h2>
-          <p><span class="i18n" data-en='How to open the growing-area map, view business records and farming logs for each cooperative.'>Cách mở bản đồ vùng trồng, xem hồ sơ kinh doanh và nhật ký canh tác của từng hợp tác xã.</span></p>
+          <h2><span class="i18n" data-en='How to use the digital map'>Hướng dẫn sử dụng bản đồ số hoá</span></h2>
+          <p><span class="i18n" data-en='Featured functions: View growing regions · View profiles · View farming logs.'>Các chức năng nổi bật: Xem vùng nguyên liệu · Xem hồ sơ · Xem nhật ký canh tác.</span></p>
         </div>
         <div class="video-wrap">
           <video controls preload="metadata">
@@ -630,7 +888,7 @@
             <div class="step-index">01</div>
             <div class="step-body">
               <h3><span class="i18n" data-en='Visit the homepage'>Truy cập trang chủ</span></h3>
-              <p><span class="i18n" data-en='Open your browser and go to taybac-agritage.vn. The homepage gives a general introduction, choose a cooperative from the menu to see details.'>Mở trình duyệt, truy cập taybac-agritage.vn. Trang chủ giới thiệu chung, chọn hợp tác xã trên thanh menu để xem chi tiết.</span></p>
+              <p><span class="i18n" data-en='Open your browser and go to taybac-agritage.vn. The homepage gives a general introduction, choose a menu item to see details.'>Mở trình duyệt, truy cập taybac-agritage.vn. Trang chủ giới thiệu chung, chọn mục trên thanh menu để xem chi tiết.</span></p>
             </div>
           </div>
           <div class="step-shots">
@@ -641,8 +899,8 @@
           <div class="step-top">
             <div class="step-index">02</div>
             <div class="step-body">
-              <h3><span class="i18n" data-en='Select a cooperative and open the database'>Chọn HTX và mở cơ sở dữ liệu</span></h3>
-              <p><span class="i18n" data-en='Click a cooperative name in the menu to open its page, then click "Open database" to go to the growing-area map.'>Bấm vào tên HTX trên menu để vào trang giới thiệu riêng, sau đó bấm nút "Mở cơ sở dữ liệu" để chuyển đến bản đồ vùng trồng.</span></p>
+              <h3><span class="i18n" data-en='Go to the Growing Regions page'>Vào trang Vùng nguyên liệu</span></h3>
+              <p><span class="i18n" data-en='Click "Growing Regions" on the menu, choose a cooperative tag, then click "Open database" to go to the growing-area map.'>Bấm "Vùng nguyên liệu" trên menu, chọn tag hợp tác xã muốn xem, sau đó bấm nút "Mở cơ sở dữ liệu" để chuyển đến bản đồ vùng trồng.</span></p>
             </div>
           </div>
           <div class="step-shots">
@@ -725,19 +983,33 @@
       </section>
     </div>
 
-    <div id="mang" class="page">
-      <div class="m-page" style="--m-accent:var(--mang)">
-        <div class="m-text">
-          <div class="kicker"><span class="i18n" data-en='A product of the forest'>Sản vật dưới tán rừng</span></div>
-          <h1><span class="i18n" data-en='Mai Bamboo Shoots'>Măng mai</span></h1>
-          <p><span class="i18n" data-en='Growing naturally on hillsides, mai bamboo is the staple crop of Lâm Thượng. After harvest, the shoots are processed into fresh and sliced dried bamboo, shaped by the land, the forest, and countless days of diligent care.'>Sinh trưởng tự nhiên trên các sườn đồi, măng mai là cây trồng chủ lực của Lâm Thượng. Sau thu hoạch, măng được sơ chế thành măng tươi và măng khô thái sợi — kết tinh từ đất, từ rừng và từ biết bao ngày tháng cần mẫn của bà con.</span></p>
-          <a class="m-cta" href="https://www.google.com/maps/d/edit?mid=19PyvPATXo3lJ3RsmCFZ056pbx2mgusc&usp=sharing" target="_blank" rel="noopener">
+    <div id="vung-nguyen-lieu" class="page">
+      <div class="page-head">
+        <h1><span class="i18n" data-en='Growing regions beneath the forest'>Vùng nguyên liệu dưới tán rừng</span></h1>
+        <p><span class="i18n" data-en='Lâm Thượng Agroforestry & Herbal Cooperative Network — choose a cooperative to see its location, contact and detailed growing-area map.'>Mạng lưới HTX Nông Lâm nghiệp & Dược liệu Lâm Thượng — chọn hợp tác xã để xem vị trí, liên hệ và bản đồ vùng trồng chi tiết.</span></p>
+      </div>
+      <div class="coop-filter">
+        <button class="active" onclick="filterCoop('all', this)"><span class="i18n" data-en='All'>Tất cả</span></button>
+        <button onclick="filterCoop('mang', this)"><span class="i18n" data-en='Bamboo'>Măng</span></button>
+        <button onclick="filterCoop('gung', this)"><span class="i18n" data-en='Ginger'>Gừng</span></button>
+        <button onclick="filterCoop('que', this)"><span class="i18n" data-en='Cinnamon'>Quế</span></button>
+      </div>
+      <div class="coop-card" data-coop="mang">
+        <div>
+          <div class="kicker" style="--m-accent:var(--mang)"><span class="i18n" data-en='A product of the forest'>Sản vật dưới tán rừng</span></div>
+          <h2><span class="i18n" data-en='Mai Bamboo Shoots'>Măng mai</span></h2>
+          <div class="coop-org">Hợp tác xã Nông nghiệp Phúc Dương</div>
+          <div class="coop-meta">
+            <div><b><span class="i18n" data-en='Location'>Vị trí</span></b><span class="i18n" data-en='Lâm Thượng, Lục Yên (now Lào Cai province)'>Lâm Thượng, Lục Yên (nay thuộc Lào Cai)</span></div>
+            <div><b><span class="i18n" data-en='Contact'>Liên hệ</span></b><span class="i18n" data-en='Updating soon'>Đang cập nhật</span></div>
+          </div>
+          <p class="desc"><span class="i18n" data-en='Growing naturally on hillsides, mai bamboo is the staple crop of Lâm Thượng. After harvest, the shoots are processed into fresh and sliced dried bamboo.'>Sinh trưởng tự nhiên trên các sườn đồi, măng mai là cây trồng chủ lực của Lâm Thượng. Sau thu hoạch, măng được sơ chế thành măng tươi và măng khô thái sợi.</span></p>
+          <a class="m-cta" href="https://www.google.com/maps/d/edit?mid=19PyvPATXo3lJ3RsmCFZ056pbx2mgusc&usp=sharing" target="_blank" rel="noopener" style="background:var(--mang)">
             <span class="i18n" data-en='Open database'>Mở cơ sở dữ liệu</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
           </a>
-          <a class="m-secondary" href="#home" onclick="setTimeout(function(){document.getElementById('huong-dan-su-dung').scrollIntoView({behavior:'smooth'})},60)"><span class="i18n" data-en='View the map user guide →'>Xem hướng dẫn sử dụng bản đồ →</span></a>
         </div>
-        <div class="m-art-wrap">
+        <div class="coop-right">
           <svg class="material-art" viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="mangGlow" cx="50%" cy="38%" r="60%">
@@ -756,40 +1028,25 @@
   </g>
 </svg>
 
+          <div class="coop-products"><span><span class="i18n" data-en='Dried bamboo shoots'>Măng mai sấy khô</span></span><span><span class="i18n" data-en='Dried sour bamboo shoots'>Măng chua khô</span></span></div>
         </div>
       </div>
-      
-      <section class="products">
-        <p class="intro-lead"><span class="i18n" data-en='Some livelihoods begin as a small sprout, growing beneath the forest canopy and nurtured by local hands season after season. Today, products from Lâm Thượng are shaped by the land, the forest, and countless days of care, carrying the dedication of the people who live and work alongside the forest.'>Có những sinh kế bắt đầu từ một mầm cây nhỏ, lớn lên dưới tán rừng và được vun bồi bằng đôi bàn tay người dân qua từng mùa. Những sản vật Lâm Thượng hôm nay là kết tinh của đất, của rừng và của biết bao ngày tháng cần mẫn, mang theo cả tâm huyết của những người đang sống và làm việc cùng rừng.</span></p>
-        <h2><span class="i18n" data-en='Bamboo shoot products'>Sản phẩm về măng</span></h2>
-        <p class="sub-lead"><span class="i18n" data-en='Each bamboo season brings new life beneath the forest canopy of Lâm Thượng. From shoots tended, harvested and processed by local hands, these products create more work and livelihood for those connected to the forest.'>Mỗi mùa măng về lại mang theo một nhịp sống mới dưới tán rừng Lâm Thượng. Từ những búp măng mai được bà con chăm sóc, thu hái và chế biến, những sản vật địa phương ra đời, góp phần tạo thêm công việc và sinh kế cho những người gắn bó với rừng.</span></p>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-photo"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
-            <div class="product-name"><span class="i18n" data-en='Dried bamboo shoots'>Măng mai sấy khô</span></div>
+      <div class="coop-card" data-coop="gung">
+        <div>
+          <div class="kicker" style="--m-accent:var(--gung)"><span class="i18n" data-en='A product of the forest'>Sản vật dưới tán rừng</span></div>
+          <h2><span class="i18n" data-en='Ginger'>Gừng</span></h2>
+          <div class="coop-org">Hợp tác xã EcoNông</div>
+          <div class="coop-meta">
+            <div><b><span class="i18n" data-en='Location'>Vị trí</span></b><span class="i18n" data-en='Lâm Thượng, Lục Yên (now Lào Cai province)'>Lâm Thượng, Lục Yên (nay thuộc Lào Cai)</span></div>
+            <div><b><span class="i18n" data-en='Contact'>Liên hệ</span></b>0359.992.6407</div>
           </div>
-          <div class="product-card">
-            <div class="product-photo"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
-            <div class="product-name"><span class="i18n" data-en='Dried sour bamboo shoots'>Măng chua khô</span></div>
-          </div>
-        </div>
-      </section>
-      <div class="m-back"><a href="#home"><span class="i18n" data-en='← Back to homepage'>← Quay lại trang chủ</span></a></div>
-    </div>
-
-    <div id="gung" class="page">
-      <div class="m-page" style="--m-accent:var(--gung)">
-        <div class="m-text">
-          <div class="kicker"><span class="i18n" data-en='A product of the forest'>Sản vật dưới tán rừng</span></div>
-          <h1><span class="i18n" data-en='Ginger'>Gừng</span></h1>
-          <p><span class="i18n" data-en='Intercropped beneath the forest canopy under an agroforestry model, ginger provides extra income for Lâm Thượng households. Main products include dried sliced ginger, pure ginger powder, and ginger tea.'>Trồng xen dưới tán rừng theo mô hình nông lâm kết hợp, gừng là nguồn thu nhập bổ sung cho các hộ dân Lâm Thượng. Sản phẩm chính gồm: gừng thái lát khô, bột gừng nguyên chất, trà gừng.</span></p>
-          <a class="m-cta" href="https://www.google.com/maps/d/u/0/edit?mid=1X8sxjFa9J2gLWLDCgszoIs7wEGh_qYA&ll=22.214123278957707%2C104.65531310961819&z=14" target="_blank" rel="noopener">
+          <p class="desc"><span class="i18n" data-en='Intercropped beneath the forest canopy under an agroforestry model, ginger provides extra income for Lâm Thượng households.'>Trồng xen dưới tán rừng theo mô hình nông lâm kết hợp, gừng là nguồn thu nhập bổ sung cho các hộ dân Lâm Thượng.</span></p>
+          <a class="m-cta" href="https://www.google.com/maps/d/u/0/edit?mid=1X8sxjFa9J2gLWLDCgszoIs7wEGh_qYA&ll=22.214123278957707%2C104.65531310961819&z=14" target="_blank" rel="noopener" style="background:var(--gung)">
             <span class="i18n" data-en='Open database'>Mở cơ sở dữ liệu</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
           </a>
-          <a class="m-secondary" href="#home" onclick="setTimeout(function(){document.getElementById('huong-dan-su-dung').scrollIntoView({behavior:'smooth'})},60)"><span class="i18n" data-en='View the map user guide →'>Xem hướng dẫn sử dụng bản đồ →</span></a>
         </div>
-        <div class="m-art-wrap">
+        <div class="coop-right">
           <svg class="material-art" viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="gungGlow" cx="50%" cy="45%" r="58%">
@@ -813,44 +1070,25 @@
   </g>
 </svg>
 
+          <div class="coop-products"><span><span class="i18n" data-en='Dried sliced ginger'>Gừng thái lát khô</span></span><span><span class="i18n" data-en='Pure ginger powder'>Bột gừng nguyên chất</span></span><span><span class="i18n" data-en='Ginger tea'>Trà gừng</span></span></div>
         </div>
       </div>
-      
-      <section class="products">
-        <p class="intro-lead"><span class="i18n" data-en='Some livelihoods begin as a small sprout, growing beneath the forest canopy and nurtured by local hands season after season. Today, products from Lâm Thượng are shaped by the land, the forest, and countless days of care, carrying the dedication of the people who live and work alongside the forest.'>Có những sinh kế bắt đầu từ một mầm cây nhỏ, lớn lên dưới tán rừng và được vun bồi bằng đôi bàn tay người dân qua từng mùa. Những sản vật Lâm Thượng hôm nay là kết tinh của đất, của rừng và của biết bao ngày tháng cần mẫn, mang theo cả tâm huyết của những người đang sống và làm việc cùng rừng.</span></p>
-        <h2><span class="i18n" data-en='Ginger products'>Sản phẩm về gừng</span></h2>
-        <p class="sub-lead"><span class="i18n" data-en='Intercropped beneath the forest under an agroforestry model, ginger is tended and harvested seasonally by Lâm Thượng households, then processed into products with distinct local flavour.'>Trồng xen dưới tán rừng theo mô hình nông lâm kết hợp, gừng được bà con Lâm Thượng chăm sóc và thu hái theo mùa, sau đó sơ chế thành những sản vật mang đậm hương vị bản địa.</span></p>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-photo"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
-            <div class="product-name"><span class="i18n" data-en='Dried sliced ginger'>Gừng thái lát khô</span></div>
+      <div class="coop-card" data-coop="que">
+        <div>
+          <div class="kicker" style="--m-accent:var(--que)"><span class="i18n" data-en='A product of the forest'>Sản vật dưới tán rừng</span></div>
+          <h2><span class="i18n" data-en='Cinnamon'>Quế</span></h2>
+          <div class="coop-org"><span class="i18n" data-en='Updating soon'>Đang cập nhật</span></div>
+          <div class="coop-meta">
+            <div><b><span class="i18n" data-en='Location'>Vị trí</span></b><span class="i18n" data-en='Updating soon'>Đang cập nhật</span></div>
+            <div><b><span class="i18n" data-en='Contact'>Liên hệ</span></b><span class="i18n" data-en='Updating soon'>Đang cập nhật</span></div>
           </div>
-          <div class="product-card">
-            <div class="product-photo"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
-            <div class="product-name"><span class="i18n" data-en='Pure ginger powder'>Bột gừng nguyên chất</span></div>
-          </div>
-          <div class="product-card">
-            <div class="product-photo"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
-            <div class="product-name"><span class="i18n" data-en='Ginger tea'>Trà gừng</span></div>
-          </div>
-        </div>
-      </section>
-      <div class="m-back"><a href="#home"><span class="i18n" data-en='← Back to homepage'>← Quay lại trang chủ</span></a></div>
-    </div>
-
-    <div id="que" class="page">
-      <div class="m-page" style="--m-accent:var(--que)">
-        <div class="m-text">
-          <div class="kicker"><span class="i18n" data-en='A product of the forest'>Sản vật dưới tán rừng</span></div>
-          <h1><span class="i18n" data-en='Cinnamon'>Quế</span></h1>
-          <p><span class="i18n" data-en='Intercropped with ginger and medicinal herbs beneath the forest canopy, cinnamon is harvested after years of care. Dried cinnamon bark is the main product, used as a spice and for essential oil extraction.'>Trồng xen cùng gừng và dược liệu dưới tán rừng, quế cho thu hoạch sau nhiều năm chăm sóc. Vỏ quế phơi khô là sản phẩm chính, dùng làm gia vị và nguyên liệu chiết xuất tinh dầu.</span></p>
-          <a class="m-cta" href="https://www.google.com/maps/d/edit?mid=1NdXsGKHJ9qeYrKXXJ0YNNIH0JTDGpXY&usp=sharing" target="_blank" rel="noopener">
+          <p class="desc"><span class="i18n" data-en='Intercropped with ginger and medicinal herbs beneath the forest canopy, cinnamon is harvested after years of care. Dried cinnamon bark is the main product.'>Trồng xen cùng gừng và dược liệu dưới tán rừng, quế cho thu hoạch sau nhiều năm chăm sóc. Vỏ quế phơi khô là sản phẩm chính.</span></p>
+          <a class="m-cta" href="https://www.google.com/maps/d/edit?mid=1NdXsGKHJ9qeYrKXXJ0YNNIH0JTDGpXY&usp=sharing" target="_blank" rel="noopener" style="background:var(--que)">
             <span class="i18n" data-en='Open database'>Mở cơ sở dữ liệu</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
           </a>
-          <a class="m-secondary" href="#home" onclick="setTimeout(function(){document.getElementById('huong-dan-su-dung').scrollIntoView({behavior:'smooth'})},60)"><span class="i18n" data-en='View the map user guide →'>Xem hướng dẫn sử dụng bản đồ →</span></a>
         </div>
-        <div class="m-art-wrap">
+        <div class="coop-right">
           <svg class="material-art" viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="queGlow" cx="50%" cy="42%" r="60%">
@@ -870,25 +1108,39 @@
   </g>
 </svg>
 
+          <div class="coop-products"><span><span class="i18n" data-en='Dried cinnamon bark'>Vỏ quế phơi khô</span></span><span><span class="i18n" data-en='Cinnamon essential oil'>Tinh dầu quế</span></span></div>
         </div>
       </div>
-      
-      <section class="products">
-        <p class="intro-lead"><span class="i18n" data-en='Some livelihoods begin as a small sprout, growing beneath the forest canopy and nurtured by local hands season after season. Today, products from Lâm Thượng are shaped by the land, the forest, and countless days of care, carrying the dedication of the people who live and work alongside the forest.'>Có những sinh kế bắt đầu từ một mầm cây nhỏ, lớn lên dưới tán rừng và được vun bồi bằng đôi bàn tay người dân qua từng mùa. Những sản vật Lâm Thượng hôm nay là kết tinh của đất, của rừng và của biết bao ngày tháng cần mẫn, mang theo cả tâm huyết của những người đang sống và làm việc cùng rừng.</span></p>
-        <h2><span class="i18n" data-en='Cinnamon products'>Sản phẩm về quế</span></h2>
-        <p class="sub-lead"><span class="i18n" data-en='Cinnamon is intercropped with ginger and medicinal herbs beneath the forest, harvested after years of steady care. Once dried, the bark becomes a valuable ingredient for both spice and essential oil extraction.'>Quế được trồng xen cùng gừng và dược liệu dưới tán rừng, cho thu hoạch sau nhiều năm chăm sóc bền bỉ. Vỏ quế sau khi phơi khô trở thành nguyên liệu quý cho cả gia vị lẫn chiết xuất tinh dầu.</span></p>
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-photo"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
-            <div class="product-name"><span class="i18n" data-en='Dried cinnamon bark'>Vỏ quế phơi khô</span></div>
+    </div>
+
+    <div id="lien-he" class="page">
+      <div class="page-head">
+        <h1><span class="i18n" data-en='Contact'>Liên hệ</span></h1>
+        <p><span class="i18n" data-en='Want to learn more or bring your cooperative into the network? Reach out using the details below.'>Bạn muốn tìm hiểu thêm hoặc đưa hợp tác xã của mình vào mạng lưới? Liên hệ với chúng tôi theo thông tin bên dưới.</span></p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><b><span class="i18n" data-en='Address'>Địa chỉ</span></b><span><span class="i18n" data-en='Lâm Thượng commune, Lào Cai province'>Xã Lâm Thượng, tỉnh Lào Cai</span></span></div>
           </div>
-          <div class="product-card">
-            <div class="product-photo"><span class="i18n" data-en='Product photo<br>coming soon'>Ảnh sản phẩm<br>sẽ được cập nhật</span></div>
-            <div class="product-name"><span class="i18n" data-en='Cinnamon essential oil'>Tinh dầu quế</span></div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><b>Hotline</b><span>0359.992.6407</span></div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            <div><b>Email</b><span>contact@taybac-agritage.vn</span></div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20"/></svg>
+            <div><b>Website</b><span>taybac-agritage.vn</span></div>
           </div>
         </div>
-      </section>
-      <div class="m-back"><a href="#home"><span class="i18n" data-en='← Back to homepage'>← Quay lại trang chủ</span></a></div>
+        <div class="contact-map-note">
+          <span class="i18n" data-en='Contact map/visual will be updated once a reference is provided.'>Bản đồ/ hình ảnh liên hệ sẽ được cập nhật theo mẫu bạn gửi.</span>
+        </div>
+      </div>
     </div>
 
     <footer>
@@ -962,6 +1214,14 @@
         b.classList.toggle('active', b.dataset.lang === lang);
       });
       localStorage.setItem('lang', lang);
+    }
+
+    function filterCoop(key, btn){
+      document.querySelectorAll('.coop-filter button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.coop-card').forEach(function(card){
+        card.style.display = (key === 'all' || card.dataset.coop === key) ? 'grid' : 'none';
+      });
     }
   </script>
 </body>
