@@ -85,10 +85,12 @@
   }
   nav.topnav a{
     position:relative;
-    font-size:13px;
-    font-weight:500;
+    font-size:12.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
     text-decoration:none;
-    color:var(--cream-dim);
+    color:var(--text-dark);
     padding:8px 14px;
     cursor:pointer;
     transition:color .2s ease;
@@ -133,11 +135,15 @@
     color:var(--text-dark);
   }
   .hero-caption .tagline{
+    display:inline-block;
     font-family:'Fraunces', serif;
     font-style:italic;
     font-weight:500;
-    font-size:clamp(16px,2vw,19px);
+    font-size:clamp(14px,1.8vw,17px);
     color:var(--matcha);
+    background:var(--gold-soft);
+    padding:8px 22px;
+    border-radius:999px;
     margin:0 0 22px;
   }
   .hero-caption .sub{
@@ -792,34 +798,79 @@
 
   /* ===================== FOOTER ===================== */
   footer{
+    margin:0 -24px;
+    padding:56px 24px 0;
+    background:#3F4E2A;
     text-align:center;
-    padding-top:44px;
-    border-top:1px solid var(--hairline);
     font-size:12px;
-    color:var(--cream-faint);
+    color:rgba(255,255,255,0.72);
+  }
+  .footer-inner{
+    max-width:520px;
+    margin:0 auto;
   }
   .footer-org{
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    gap:64px;
+    gap:36px;
     flex-wrap:wrap;
-    margin-bottom:32px;
+    margin-bottom:28px;
   }
-  .footer-col{display:flex; flex-direction:column; align-items:center; gap:12px; max-width:220px;}
-  .footer-label{font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+  .footer-col{display:flex; flex-direction:column; align-items:center; gap:12px; max-width:200px;}
+  .footer-label{font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); font-weight:700;}
   .footer-col img{
-    height:44px;
+    height:64px;
     width:auto;
-    max-width:200px;
+    max-width:180px;
     object-fit:contain;
     background:#fff;
-    padding:8px 14px;
+    padding:10px 16px;
     border-radius:8px;
-    border:1px solid var(--hairline);
+    border:1px solid rgba(255,255,255,0.15);
   }
-  .footer-col span.org-name{font-size:12.5px; color:var(--cream-dim); line-height:1.4;}
-  .footer-base{line-height:1.6; padding-bottom:8px;}
+  .footer-col span.org-name{font-size:12px; color:rgba(255,255,255,0.65); line-height:1.4;}
+  .footer-base{
+    line-height:1.6;
+    padding-bottom:24px;
+    font-style:italic;
+    font-size:11.5px;
+    color:rgba(255,255,255,0.5);
+  }
+  .footer-links-row{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    padding-bottom:28px;
+    border-top:1px solid rgba(255,255,255,0.14);
+    padding-top:24px;
+  }
+  .footer-links-col h4{
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:#fff;
+    margin:0 0 12px;
+    font-weight:700;
+  }
+  .footer-links-col a{
+    display:block;
+    font-size:13px;
+    color:rgba(255,255,255,0.68);
+    text-decoration:none;
+    margin-bottom:8px;
+  }
+  .footer-links-col a:hover{color:var(--gold);}
+  .footer-bottom-bar{
+    background:var(--gold);
+    color:#2c2306;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:0.02em;
+    padding:14px 24px;
+    text-align:center;
+  }
 
 </style>
 </head>
@@ -1238,6 +1289,7 @@
     </div>
 
     <footer>
+      <div class="footer-inner">
       <div class="footer-org">
         <div class="footer-col">
           <span class="footer-label"><span class="i18n" data-en='Implemented by'>Đơn vị thực hiện</span></span>
@@ -1253,8 +1305,25 @@
           <span class="org-name"><span class="i18n" data-en='European Union — Global Gateway'>Liên minh châu Âu — Global Gateway</span></span>
         </div>
       </div>
-      <div class="footer-base">
-        <span class="i18n" data-en='Last updated: September 2026 · Growing-region data hub'>Cập nhật lần cuối: tháng 9/2026 · Trang liên kết dữ liệu vùng nguyên liệu</span>
+      <p class="footer-base">
+        <span class="i18n" data-en='This website was developed with support from the European Union, under the Global Gateway cooperation programme. The views expressed here do not necessarily reflect the official opinion of the European Union.'>Trang web này được xây dựng với sự hỗ trợ của Liên minh châu Âu, trong khuôn khổ chương trình hợp tác Global Gateway. Các quan điểm được trình bày ở đây không được coi là phản ánh quan điểm chính thức của Liên minh châu Âu.</span>
+      </p>
+      <div class="footer-links-row">
+        <div class="footer-links-col">
+          <h4><span class="i18n" data-en='Explore'>Khám phá</span></h4>
+          <a href="#vung-nguyen-lieu" onclick="showPage('vung-nguyen-lieu')"><span class="i18n" data-en='Growing regions'>Vùng nguyên liệu</span></a>
+          <a href="#san-pham" onclick="showPage('san-pham')"><span class="i18n" data-en='Local products'>Sản phẩm bản địa</span></a>
+          <a href="#gioi-thieu" onclick="showPage('gioi-thieu')"><span class="i18n" data-en='About the network'>Giới thiệu mạng lưới</span></a>
+        </div>
+        <div class="footer-links-col">
+          <h4><span class="i18n" data-en='Support'>Hỗ trợ chung</span></h4>
+          <a href="#lien-he" onclick="showPage('lien-he')"><span class="i18n" data-en='Contact'>Liên hệ</span></a>
+          <a href="#home" onclick="showPage('home')"><span class="i18n" data-en='Home'>Trang chủ</span></a>
+        </div>
+      </div>
+      </div>
+      <div class="footer-bottom-bar">
+        Copyright 2026 © Agritage Việt Nam — Tây Bắc
       </div>
     </footer>
   </div>
