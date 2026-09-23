@@ -8,9 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-deep:#E3EED4;
-    --bg-panel:#FBFCF6;
-    --bg-panel-2:#D7E7C4;
+    --bg-deep:#FFFFFF;
+    --bg-panel:#FFFFFF;
+    --bg-panel-2:#F3F7EE;
     --matcha:#3E7A34;
     --gold:#E8A93B;
     --gold-soft:rgba(232,169,59,0.16);
@@ -28,7 +28,7 @@
   html{scroll-behavior:smooth;}
   html,body{margin:0;padding:0;}
   body{
-    background:var(--bg-deep);
+    background:#FFFFFF;
     color:var(--text-dark);
     font-family:'Montserrat', sans-serif;
     min-height:100vh;
@@ -107,7 +107,7 @@
   }
 
   /* ===================== PAGES ===================== */
-  .page{display:none;}
+  .page{display:none;background:#fff;}
   .page.active-page{display:block;}
 
   /* ===================== HERO ===================== */
@@ -226,7 +226,7 @@
   .guide{
     margin:0 -24px 0;
     padding:76px 24px 84px;
-    background:linear-gradient(180deg, var(--bg-panel) 0%, var(--bg-deep) 100%);
+    background:#FFFFFF;
   }
   .guide-kicker{
     text-align:center;
@@ -341,7 +341,7 @@
   .step-shots:hover img{transform:scale(1.035);}
 
   /* ===================== PRODUCTS ===================== */
-  .products{
+  .products{background:#fff;
     padding:20px 0 56px;
   }
   .products .intro-lead{
@@ -395,7 +395,7 @@
   }
 
   /* ===================== MATERIAL PAGE ===================== */
-  .m-page{
+  .m-page{background:#fff;
     display:grid;
     grid-template-columns:1.1fr 0.9fr;
     gap:56px;
@@ -403,7 +403,7 @@
     padding:64px 0 40px;
   }
   @media(max-width:820px){
-    .m-page{grid-template-columns:1fr; padding:48px 0 32px; gap:32px;}
+    .m-page{background:#fff;grid-template-columns:1fr; padding:48px 0 32px; gap:32px;}
     .m-art-wrap{order:-1; max-width:280px; margin:0 auto;}
   }
   .m-text .kicker{
@@ -782,6 +782,105 @@
   .to-top:hover{background:var(--gold);}
   .to-top svg{width:18px;height:18px;}
 
+
+  /* ===================== HOMEPAGE PROPOSAL SECTIONS ===================== */
+  .home-section{
+    margin:0 -24px;
+    padding:72px 24px;
+    background:#fff;
+    border-top:1px solid rgba(22,36,15,0.08);
+  }
+  .home-section.alt{background:#F7F9F3;}
+  .home-inner{max-width:980px;margin:0 auto;}
+  .home-kicker{
+    font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--matcha);margin-bottom:10px;
+  }
+  .home-title{
+    font-family:'Montserrat',sans-serif;font-weight:800;
+    font-size:clamp(25px,3.5vw,34px);line-height:1.15;
+    margin:0 0 12px;color:var(--text-dark);
+  }
+  .home-lead{
+    font-size:14px;line-height:1.75;color:var(--cream-dim);
+    max-width:700px;margin:0 0 28px;
+  }
+  .home-actions{display:flex;gap:10px;flex-wrap:wrap;}
+  .home-link{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:11px 17px;border-radius:999px;text-decoration:none;
+    font-size:13px;font-weight:700;border:1px solid var(--hairline);
+    background:#fff;color:var(--text-dark);
+  }
+  .home-link.primary{background:var(--matcha);color:#fff;border-color:var(--matcha);}
+  .home-link:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(22,36,15,.10);}
+  .home-two-col{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch;
+  }
+  @media(max-width:760px){.home-two-col{grid-template-columns:1fr;}}
+  .home-card{
+    background:#fff;border:1px solid var(--hairline);border-radius:12px;
+    padding:24px;box-shadow:0 8px 26px rgba(22,36,15,.05);
+  }
+  .home-card h3{font-size:16px;margin:0 0 9px;font-weight:800;}
+  .home-card p{font-size:13px;line-height:1.7;color:var(--cream-dim);margin:0;}
+  .map-card{padding:0;overflow:hidden;}
+  .map-card iframe{display:block;width:100%;height:330px;border:0;}
+  .map-card .map-caption{padding:16px 18px;}
+  .home-mini-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;
+  }
+  @media(max-width:760px){.home-mini-grid{grid-template-columns:1fr;}}
+  .home-mini{
+    padding:22px;background:#fff;border:1px solid var(--hairline);border-radius:12px;
+  }
+  .home-mini .mini-label{
+    font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--matcha);margin-bottom:8px;
+  }
+  .home-mini h3{font-size:17px;margin:0 0 8px;font-weight:800;}
+  .home-mini p{font-size:13px;line-height:1.65;color:var(--cream-dim);margin:0 0 14px;}
+  .home-mini a{font-size:12.5px;font-weight:700;color:var(--matcha);text-decoration:none;}
+  .value-flow{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;
+  }
+  @media(max-width:760px){.value-flow{grid-template-columns:1fr;}}
+  .value-item{
+    position:relative;padding:24px;background:#fff;border:1px solid var(--hairline);
+    border-radius:12px;
+  }
+  .value-number{
+    font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.08em;margin-bottom:10px;
+  }
+  .value-item h3{font-size:17px;margin:0 0 8px;font-weight:800;}
+  .value-item p{font-size:13px;line-height:1.65;color:var(--cream-dim);margin:0;}
+  .preview-products{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;
+  }
+  @media(max-width:760px){.preview-products{grid-template-columns:1fr;}}
+  .preview-product{
+    min-height:190px;padding:24px;border-radius:12px;border:1px solid var(--hairline);
+    display:flex;flex-direction:column;justify-content:flex-end;
+    background:linear-gradient(145deg,#fff 0%,#F3F7EE 100%);
+  }
+  .preview-product .eyebrow{font-size:11px;font-weight:800;color:var(--matcha);margin-bottom:7px;}
+  .preview-product h3{font-size:19px;margin:0 0 8px;font-weight:800;}
+  .preview-product p{font-size:12.5px;line-height:1.6;color:var(--cream-dim);margin:0;}
+  .discover{
+    display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch;
+  }
+  @media(max-width:760px){.discover{grid-template-columns:1fr;}}
+  .discover-photo{
+    min-height:300px;border-radius:14px;overflow:hidden;
+    background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Vuon%20QG%20Hoang%20Lien%202.jpg');
+    background-size:cover;background-position:center;
+  }
+  .discover-text{display:flex;flex-direction:column;justify-content:center;}
+  .about-cover{
+    margin:0 -24px 42px;height:280px;overflow:hidden;
+  }
+  .about-cover img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 48%;}
+
   /* ===================== LIGHTBOX ===================== */
   #lightbox{
     display:none;
@@ -884,7 +983,7 @@
       <a href="#home" data-page="home"><span class="i18n" data-en='Home'>Trang chủ</span></a>
       <a href="#gioi-thieu" data-page="gioi-thieu"><span class="i18n" data-en='About'>Giới thiệu</span></a>
       <a href="#vung-nguyen-lieu" data-page="vung-nguyen-lieu"><span class="i18n" data-en='Growing Regions'>Vùng nguyên liệu</span></a>
-      <a href="#san-pham" data-page="san-pham"><span class="i18n" data-en='Local Products'>Sản phẩm bản địa</span></a>
+      <a href="#san-pham" data-page="san-pham"><span class="i18n" data-en='Agroforestry Products'>Sản phẩm nông lâm sản</span></a>
       <a href="#lien-he" data-page="lien-he"><span class="i18n" data-en='Contact'>Liên hệ</span></a>
     </nav>
     <div class="lang-switch">
@@ -926,9 +1025,123 @@
         <div class="stat-card"><div class="stat-num">50–70</div><div class="stat-label"><span class="i18n" data-en='Linked households recorded in the system'>Hộ sản xuất liên kết được cập nhật vào hệ thống</span></div></div>
         <div class="stat-card"><div class="stat-num">60%</div><div class="stat-label"><span class="i18n" data-en='Members are women or from ethnic minority groups'>Thành viên tham gia là phụ nữ & người dân tộc thiểu số</span></div></div>
       </div>
+
+      <!-- 2. GIỚI THIỆU NGẮN VỀ MẠNG LƯỚI -->
+      <section class="home-section">
+        <div class="home-inner">
+          <div class="home-kicker">Mạng lưới</div>
+          <h2 class="home-title"><span class="i18n" data-en='Lâm Thượng Agroforestry & Herbal Cooperative Network'>Giới thiệu ngắn về mạng lưới</span></h2>
+          <div class="home-two-col">
+            <div class="home-card">
+              <h3><span class="i18n" data-en='Connecting forest-based livelihoods'>Kết nối sinh kế gắn với rừng</span></h3>
+              <p><span class="i18n" data-en='The network connects cooperatives and local products around Lâm Thượng, helping standardise growing-area data, strengthen traceability and make local products easier to discover.'>Mạng lưới kết nối các hợp tác xã và sản vật địa phương quanh Lâm Thượng, hướng tới chuẩn hoá dữ liệu vùng nguyên liệu, tăng khả năng truy xuất nguồn gốc và giúp các sản phẩm địa phương dễ dàng được khám phá hơn.</span></p>
+              <div class="home-actions" style="margin-top:20px;">
+                <a class="home-link primary" href="#gioi-thieu" onclick="showPage('gioi-thieu')"><span class="i18n" data-en='About the network'>Xem giới thiệu mạng lưới →</span></a>
+              </div>
+            </div>
+            <div class="home-card">
+              <h3><span class="i18n" data-en='Who is it for?'>Mạng lưới dành cho ai?</span></h3>
+              <p><span class="i18n" data-en='Consumers, businesses and partner organisations, and cooperatives wishing to participate can use the website to explore growing regions, cooperative profiles and local products.'>Người tiêu dùng, doanh nghiệp/đối tác và các hợp tác xã muốn tham gia có thể sử dụng website để khám phá vùng nguyên liệu, hồ sơ hợp tác xã và sản phẩm địa phương.</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. VÙNG NGUYÊN LIỆU + BẢN ĐỒ -->
+      <section class="home-section alt">
+        <div class="home-inner">
+          <div class="home-kicker">Bản đồ & vùng nguyên liệu</div>
+          <h2 class="home-title"><span class="i18n" data-en='Growing regions'>Vùng nguyên liệu</span></h2>
+          <p class="home-lead"><span class="i18n" data-en='Explore Lâm Thượng and the growing regions of the network, then open the detailed digital maps for each cooperative.'>Khám phá Lâm Thượng và các vùng nguyên liệu trong mạng lưới, sau đó mở bản đồ số chi tiết của từng hợp tác xã.</span></p>
+          <div class="home-two-col">
+            <div class="home-card map-card">
+              <iframe title="Bản đồ Lâm Thượng, Lào Cai" loading="lazy" src="https://www.google.com/maps?q=22.214123278957707,104.65531310961819&z=14&output=embed"></iframe>
+              <div class="map-caption"><strong>Lâm Thượng, Lào Cai</strong><br><span style="font-size:12px;color:var(--cream-faint)">Bản đồ vị trí khu vực mạng lưới</span></div>
+            </div>
+            <div>
+              <div class="home-mini-grid" style="grid-template-columns:1fr;">
+                <div class="home-mini">
+                  <div class="mini-label">Măng</div>
+                  <h3>HTX Nông nghiệp Phúc Dương</h3>
+                  <p>Vùng nguyên liệu măng mai và thông tin cơ sở dữ liệu vùng trồng.</p>
+                  <a href="https://www.google.com/maps/d/edit?mid=19PyvPATXo3lJ3RsmCFZ056pbx2mgusc&usp=sharing" target="_blank" rel="noopener">Mở bản đồ HTX →</a>
+                </div>
+                <div class="home-mini">
+                  <div class="mini-label">Gừng</div>
+                  <h3>HTX EcoNông</h3>
+                  <p>Vùng nguyên liệu gừng và bản đồ số chi tiết.</p>
+                  <a href="https://www.google.com/maps/d/u/0/edit?mid=1X8sxjFa9J2gLWLDCgszoIs7wEGh_qYA&ll=22.214123278957707%2C104.65531310961819&z=14" target="_blank" rel="noopener">Mở bản đồ HTX →</a>
+                </div>
+                <div class="home-mini">
+                  <div class="mini-label">Quế</div>
+                  <h3>Vùng nguyên liệu quế</h3>
+                  <p>Thông tin vùng trồng quế và dữ liệu bản đồ đang được cập nhật.</p>
+                  <a href="https://www.google.com/maps/d/edit?mid=1NdXsGKHJ9qeYrKXXJ0YNNIH0JTDGpXY&usp=sharing" target="_blank" rel="noopener">Mở bản đồ HTX →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-actions" style="margin-top:24px;">
+            <a class="home-link primary" href="#vung-nguyen-lieu" onclick="showPage('vung-nguyen-lieu')">Xem toàn bộ vùng nguyên liệu →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CHUỖI GIÁ TRỊ NỔI BẬT -->
+      <section class="home-section">
+        <div class="home-inner">
+          <div class="home-kicker">Chuỗi giá trị</div>
+          <h2 class="home-title"><span class="i18n" data-en='Featured value chains'>Chuỗi giá trị nổi bật</span></h2>
+          <p class="home-lead"><span class="i18n" data-en='The network currently highlights three product groups closely connected to local forest-based livelihoods.'>Website hiện tập trung giới thiệu ba nhóm sản vật gắn với sinh kế địa phương và hệ thống vùng nguyên liệu.</span></p>
+          <div class="value-flow">
+            <div class="value-item"><div class="value-number">01</div><h3>Măng</h3><p>Măng mai được chăm sóc, thu hái và chế biến thành các sản phẩm địa phương.</p></div>
+            <div class="value-item"><div class="value-number">02</div><h3>Gừng</h3><p>Gừng tươi được chăm sóc, thu hái theo mùa và phát triển thành nhiều dạng sản phẩm.</p></div>
+            <div class="value-item"><div class="value-number">03</div><h3>Quế</h3><p>Quế được trồng xen cùng gừng và dược liệu dưới tán rừng, cho thu hoạch sau nhiều năm chăm sóc.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. SẢN PHẨM NÔNG LÂM SẢN -->
+      <section class="home-section alt">
+        <div class="home-inner">
+          <div class="home-kicker">Sản vật địa phương</div>
+          <h2 class="home-title"><span class="i18n" data-en='Agroforestry products'>Sản phẩm nông lâm sản</span></h2>
+          <p class="home-lead"><span class="i18n" data-en='Discover products made from local raw materials, from bamboo shoots and ginger to cinnamon.'>Khám phá các sản phẩm từ nguồn nguyên liệu địa phương, từ măng và gừng đến quế.</span></p>
+          <div class="preview-products">
+            <div class="preview-product"><div class="eyebrow">Măng</div><h3>Măng khô thái sợi</h3><p>Một trong những sản phẩm măng đang được giới thiệu trên website.</p></div>
+            <div class="preview-product"><div class="eyebrow">Gừng</div><h3>Gừng tươi & gừng thái lát khô</h3><p>Các sản phẩm gắn với nguồn nguyên liệu gừng của địa phương.</p></div>
+            <div class="preview-product"><div class="eyebrow">Quế</div><h3>Vỏ quế phơi khô & tinh dầu quế</h3><p>Các sản phẩm quế được giới thiệu trong danh mục sản phẩm bản địa.</p></div>
+          </div>
+          <div class="home-actions" style="margin-top:24px;">
+            <a class="home-link primary" href="#san-pham" onclick="showPage('san-pham')">Xem danh mục sản phẩm →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. KHÁM PHÁ VÙNG ĐẤT -->
+      <section class="home-section">
+        <div class="home-inner">
+          <div class="discover">
+            <div class="discover-photo" role="img" aria-label="Cảnh quan vùng Tây Bắc"></div>
+            <div class="discover-text">
+              <div class="home-kicker">Khám phá</div>
+              <h2 class="home-title"><span class="i18n" data-en='Discover the land'>Khám phá vùng đất</span></h2>
+              <p class="home-lead"><span class="i18n" data-en='Lâm Thượng is a landscape where forests, local products and livelihoods meet. Explore the network, its growing regions and the stories behind products from the area.'>Lâm Thượng là nơi rừng, sản vật địa phương và sinh kế cùng gắn kết. Hãy khám phá mạng lưới, vùng nguyên liệu và những câu chuyện phía sau các sản phẩm của vùng đất này.</span></p>
+              <div class="home-actions">
+                <a class="home-link primary" href="#gioi-thieu" onclick="showPage('gioi-thieu')">Giới thiệu mạng lưới →</a>
+                <a class="home-link" href="#lien-he" onclick="showPage('lien-he')">Liên hệ →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
 
     <div id="gioi-thieu" class="page">
+      <div class="about-cover">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vuon%20QG%20Hoang%20Lien%202.jpg" alt="Ảnh bìa vùng Tây Bắc">
+      </div>
       <div class="page-head">
         <h1><span class="i18n" data-en='About the network'>Giới thiệu mạng lưới</span></h1>
         <p><span class="i18n" data-en='Lâm Thượng Agroforestry & Herbal Cooperative Network'>Mạng lưới HTX Nông Lâm nghiệp & Dược liệu Lâm Thượng</span></p>
@@ -1176,7 +1389,7 @@
 
     <div id="san-pham" class="page">
       <div class="page-head">
-        <h1><span class="i18n" data-en='Local products'>Sản phẩm bản địa</span></h1>
+        <h1><span class="i18n" data-en='Agroforestry products'>Sản phẩm nông lâm sản</span></h1>
         <p><span class="i18n" data-en='Some livelihoods begin as a small sprout, growing beneath the forest canopy and nurtured by local hands season after season. Today, products from Lâm Thượng are shaped by the land, the forest, and countless days of care, carrying the dedication of the people who live and work alongside the forest.'>Có những sinh kế bắt đầu từ một mầm cây nhỏ, lớn lên dưới tán rừng và được vun bồi bằng đôi bàn tay người dân qua từng mùa. Những sản vật Lâm Thượng hôm nay là kết tinh của đất, của rừng và của biết bao ngày tháng cần mẫn, mang theo cả tâm huyết của những người đang sống và làm việc cùng rừng.</span></p>
       </div>
       <div class="coop-filter">
@@ -1312,7 +1525,7 @@
         <div class="footer-links-col">
           <h4><span class="i18n" data-en='Explore'>Khám phá</span></h4>
           <a href="#vung-nguyen-lieu" onclick="showPage('vung-nguyen-lieu')"><span class="i18n" data-en='Growing regions'>Vùng nguyên liệu</span></a>
-          <a href="#san-pham" onclick="showPage('san-pham')"><span class="i18n" data-en='Local products'>Sản phẩm bản địa</span></a>
+          <a href="#san-pham" onclick="showPage('san-pham')"><span class="i18n" data-en='Agroforestry products'>Sản phẩm nông lâm sản</span></a>
           <a href="#gioi-thieu" onclick="showPage('gioi-thieu')"><span class="i18n" data-en='About the network'>Giới thiệu mạng lưới</span></a>
         </div>
         <div class="footer-links-col">
