@@ -784,7 +784,10 @@
 
 
   /* ===================== HOMEPAGE PROPOSAL SECTIONS ===================== */
-  .home-section{
+  
+      .social-impact-wrap{margin-top:28px;padding:24px;border:1px solid rgba(45,80,35,.12);border-radius:18px;background:#fff;box-shadow:0 10px 30px rgba(31,65,26,.07);text-align:center}
+      .social-impact-image{display:block;width:100%;max-width:900px;height:auto;margin:0 auto;border-radius:10px}
+.home-section{
     margin:0 -24px;
     padding:72px 24px;
     background:#fff;
@@ -971,6 +974,113 @@
     text-align:center;
   }
 
+
+
+/* ===== TÁC ĐỘNG XÃ HỘI – layout HTML/CSS theo thiết kế đề xuất ===== */
+.social-impact-section{
+  background:#fff !important;
+  padding:56px 0 64px;
+}
+
+.social-impact-inner{
+  max-width:1120px;
+  margin:0 auto;
+}
+
+.social-impact-heading{
+  text-align:center;
+  max-width:930px;
+  margin:0 auto 34px;
+}
+
+.social-impact-heading .home-kicker{
+  display:block;
+  margin:0 0 14px;
+  color:#56704f;
+  font-size:25px;
+  line-height:1.15;
+  font-weight:800;
+  letter-spacing:.2px;
+  text-transform:uppercase;
+}
+
+.social-impact-intro{
+  margin:0 auto;
+  color:#5e5e5e;
+  font-size:13px;
+  line-height:1.65;
+  font-weight:400;
+}
+
+.social-impact-stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:28px;
+  align-items:start;
+  text-align:center;
+}
+
+.social-stat{
+  min-width:0;
+  padding:0 8px;
+}
+
+.social-stat-number{
+  margin:0 0 10px;
+  font-size:48px;
+  line-height:.95;
+  font-weight:800;
+  letter-spacing:-1.5px;
+}
+
+.social-stat-plus{
+  display:inline-block;
+  margin-left:4px;
+  font-size:.48em;
+  font-weight:700;
+  vertical-align:baseline;
+  letter-spacing:0;
+}
+
+.social-stat-unit{
+  display:inline-block;
+  margin-left:5px;
+  font-size:.45em;
+  font-weight:700;
+  vertical-align:baseline;
+  letter-spacing:0;
+}
+
+.social-stat p{
+  max-width:205px;
+  margin:0 auto;
+  color:#666;
+  font-size:11px;
+  line-height:1.55;
+}
+
+.social-stat-red .social-stat-number{color:#e83332}
+.social-stat-gold .social-stat-number{color:#d99b21}
+.social-stat-green .social-stat-number{color:#55754e}
+.social-stat-blue .social-stat-number{color:#2e67bd}
+
+@media (max-width:800px){
+  .social-impact-section{padding:42px 0 48px}
+  .social-impact-heading{margin-bottom:28px}
+  .social-impact-heading .home-kicker{font-size:22px}
+  .social-impact-intro{font-size:12px;padding:0 10px}
+  .social-impact-stats{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:28px 12px;
+  }
+  .social-stat-number{font-size:42px}
+}
+
+@media (max-width:480px){
+  .social-impact-stats{grid-template-columns:1fr}
+  .social-stat p{max-width:280px}
+}
+
 </style>
 </head>
 <body>
@@ -1047,7 +1157,42 @@
         </div>
       </section>
 
-      <!-- 3. VÙNG NGUYÊN LIỆU + BẢN ĐỒ -->
+      
+      <!-- 2B. TÁC ĐỘNG XÃ HỘI -->
+      <section class="home-section social-impact-section">
+        <div class="home-inner social-impact-inner">
+          <div class="social-impact-heading">
+            <div class="home-kicker">TÁC ĐỘNG XÃ HỘI</div>
+            <p class="social-impact-intro">
+              Xuất phát điểm từ lòng tự hào về một quốc gia có nền văn hóa nông nghiệp lâu đời, Agritage Việt Nam trân trọng những tri thức bản địa của dân tộc, các giá trị văn hóa của các tộc người sống trên dải đất hình chữ S. Do vậy, chúng tôi luôn khát khao được cống hiến hết mình để gìn giữ, xây dựng, phát triển và lan tỏa những giá trị văn hóa, tri thức bản địa của các vùng miền Việt Nam tới bạn bè quốc tế.
+            </p>
+          </div>
+
+          <div class="social-impact-stats">
+            <div class="social-stat social-stat-red">
+              <div class="social-stat-number">5,060<span class="social-stat-plus">+</span></div>
+              <p>5060 thanh niên Dân tộc thiểu số được hỗ trợ đào tạo nghề và kết nối việc làm.</p>
+            </div>
+
+            <div class="social-stat social-stat-gold">
+              <div class="social-stat-number">3,000<span class="social-stat-plus">+</span></div>
+              <p>3000 nông dân có thu nhập thông qua hợp tác phát triển du lịch và nông nghiệp.</p>
+            </div>
+
+            <div class="social-stat social-stat-green">
+              <div class="social-stat-number">2<span class="social-stat-plus">+</span></div>
+              <p>02 làng Nông nghiệp dự án được xây dựng góp phần bảo tồn văn hóa của cộng đồng người Thái.</p>
+            </div>
+
+            <div class="social-stat social-stat-blue">
+              <div class="social-stat-number">30<span class="social-stat-unit">ha</span></div>
+              <p>30ha đất sản xuất nông nghiệp được phục hồi thông qua canh tác nông nghiệp sinh thái.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- 3. VÙNG NGUYÊN LIỆU + BẢN ĐỒ -->
       <section class="home-section alt">
         <div class="home-inner">
           <div class="home-kicker">Bản đồ & vùng nguyên liệu</div>
